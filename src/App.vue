@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/base.scss";
+@import "./assets/scss/base.scss";
 
 #app {
   width: 100%;

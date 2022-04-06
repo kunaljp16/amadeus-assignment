@@ -80,9 +80,11 @@ export default {
 </template>
 
 <style lang="scss">
+@import "./../assets/scss/variables";
+
 .headerWrapper {
   width: 100%;
-  border-bottom: 1px solid #1c1c1c;
+  border-bottom: 1px solid $dark-gray;
 
   .header {
     width: 1280px;
@@ -100,7 +102,7 @@ export default {
     }
 
     .nav-link {
-      color: #fff;
+      color: $white;
     }
     .mobileMenuWrapper {
       margin: 6px 0 0;
@@ -109,7 +111,7 @@ export default {
       display: none;
       width: 300px;
       height: 100vh;
-      background-color: #000;
+      background-color: $black;
       padding: 10px 30px 0 10px;
       position: absolute;
       top: 0;
@@ -128,7 +130,7 @@ export default {
         padding: 12px 10px;
         &:hover {
           cursor: pointer;
-          background: #1d1d1d;
+          background: $dark-gray2;
         }
       }
     }
