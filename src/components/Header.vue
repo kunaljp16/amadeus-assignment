@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <div class="headerWrapper">
+  <section class="headerWrapper">
     <header class="header" id="header">
       <a href="#"><logoWhite /></a>
       <ul class="nav justify-content-end mt-1 desktop">
@@ -46,12 +46,12 @@ export default {
         </li>
       </ul>
       <div class="mobileMenuWrapper">
-        <a href="javascript:void()" @click="openPanel"><MenuWhite /></a>
+        <a href="javascript:void(0)" @click="openPanel"><MenuWhite /></a>
         <div
           :class="isPanelOpen ? 'mobileMenuPanel panelOpen' : 'mobileMenuPanel'"
         >
           <span class="closeBtn" >
-            <a href="javascript:void()" role="button" @click="closePanel">
+            <a href="javascript:void(0)" role="button" @click="closePanel">
             <CloseWhite class="justify-content-end" />
           </a>
           </span>
@@ -78,7 +78,7 @@ export default {
         </div>
       </div>
     </header>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">
