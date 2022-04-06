@@ -39,10 +39,10 @@ export default {
           <a class="nav-link" href="#">SCHEDULE</a>
         </li>
         <li class="nav-item movieLibrary">
-          <a class="nav-link">MOVIE LIBRARY</a>
+          <a class="nav-link" href="#">MOVIE LIBRARY</a>
         </li>
         <li class="nav-item contact">
-          <a class="nav-link">LOCATION &amp; CONTACT</a>
+          <a class="nav-link" href="#">LOCATION &amp; CONTACT</a>
         </li>
       </ul>
       <div class="mobileMenuWrapper">
@@ -50,8 +50,10 @@ export default {
         <div
           :class="isPanelOpen ? 'mobileMenuPanel panelOpen' : 'mobileMenuPanel'"
         >
-          <span role="button" class="closeBtn" @click="closePanel">
+          <span class="closeBtn" >
+            <a href="javascript:void()" role="button" @click="closePanel">
             <CloseWhite class="justify-content-end" />
+          </a>
           </span>
           <ul class="menuList mobile">
             <li class="nav-item home">
@@ -64,13 +66,13 @@ export default {
               <a class="nav-link" href="#">SCHEDULE</a>
             </li>
             <li class="nav-item movieLibrary">
-              <a class="nav-link">MOVIE LIBRARY</a>
+              <a class="nav-link" href="#">MOVIE LIBRARY</a>
             </li>
             <li class="nav-item contact">
-              <a class="nav-link">LOCATION &amp; CONTACT</a>
+              <a class="nav-link" href="#">LOCATION &amp; CONTACT</a>
             </li>
             <li class="nav-item gallery">
-              <a class="nav-link">GALLERY</a>
+              <a class="nav-link" href="#">GALLERY</a>
             </li>
           </ul>
         </div>
@@ -103,6 +105,10 @@ export default {
 
     .nav-link {
       color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .mobileMenuWrapper {
       margin: 6px 0 0;
