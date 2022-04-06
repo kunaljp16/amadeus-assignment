@@ -1,0 +1,187 @@
+<script>
+import logoWhite from "./../assets/logos/Logo White.vue";
+import MenuWhite from "./../assets/icons/Menu White.vue";
+import CloseWhite from "./../assets/icons/Close White.vue";
+export default {
+  components: {
+    logoWhite,
+    MenuWhite,
+    CloseWhite,
+  },
+  data() {
+    return {
+      isPanelOpen: false,
+    };
+  },
+  methods: {
+    openPanel: function () {
+      return (this.isPanelOpen = true);
+    },
+    closePanel: function () {
+      return (this.isPanelOpen = false);
+    },
+  },
+};
+</script>
+
+<template>
+  <div class="headerWrapper">
+    <header class="header" id="header">
+      <a href="#"><logoWhite /></a>
+      <ul class="nav justify-content-end mt-1 desktop">
+        <li class="nav-item home">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item ourScreens">
+          <a class="nav-link" href="#">OUR SCREENS</a>
+        </li>
+        <li class="nav-item schedule">
+          <a class="nav-link" href="#">SCHEDULE</a>
+        </li>
+        <li class="nav-item movieLibrary">
+          <a class="nav-link">MOVIE LIBRARY</a>
+        </li>
+        <li class="nav-item contact">
+          <a class="nav-link">LOCATION &amp; CONTACT</a>
+        </li>
+      </ul>
+      <div class="mobileMenuWrapper">
+        <a href="javascript:void()" @click="openPanel"><MenuWhite /></a>
+        <div
+          :class="isPanelOpen ? 'mobileMenuPanel panelOpen' : 'mobileMenuPanel'"
+        >
+          <span role="button" class="closeBtn" @click="closePanel">
+            <CloseWhite class="justify-content-end" />
+          </span>
+          <ul class="menuList mobile">
+            <li class="nav-item home">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item ourScreens">
+              <a class="nav-link" href="#">OUR SCREENS</a>
+            </li>
+            <li class="nav-item schedule">
+              <a class="nav-link" href="#">SCHEDULE</a>
+            </li>
+            <li class="nav-item movieLibrary">
+              <a class="nav-link">MOVIE LIBRARY</a>
+            </li>
+            <li class="nav-item contact">
+              <a class="nav-link">LOCATION &amp; CONTACT</a>
+            </li>
+            <li class="nav-item gallery">
+              <a class="nav-link">GALLERY</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+</template>
+
+<style lang="scss">
+.headerWrapper {
+  width: 100%;
+  border-bottom: 1px solid #1c1c1c;
+
+  .header {
+    width: 1280px;
+    @media (min-width: 480px) and (max-width: 1279px) {
+      width: calc(100% - 20px);
+      padding: 20px;
+    }
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    & > a {
+      margin-right: auto;
+    }
+
+    .nav-link {
+      color: #fff;
+    }
+    .mobileMenuWrapper {
+      margin: 6px 0 0;
+    }
+    .mobileMenuPanel {
+      display: none;
+      width: 300px;
+      height: 100vh;
+      background-color: #000;
+      padding: 10px 30px 0 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &.panelOpen {
+        display: block;
+      }
+    }
+    .menuList {
+      list-style: none;
+      padding: 0;
+      margin: 0 30px 0 0;
+
+      li {
+        padding: 12px 10px;
+        &:hover {
+          cursor: pointer;
+          background: #1d1d1d;
+        }
+      }
+    }
+    .closeBtn {
+      display: block;
+      margin: 0 30px 10px 0;
+      text-align: right;
+      background: none;
+      border: none;
+    }
+    .mobile {
+      .contact,
+      .home,
+      .ourScreens,
+      .schedule,
+      .movieLibrary,
+      .contact {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .headerWrapper {
+    .header {
+      .mobile {
+        .contact,
+        .home,
+        .ourScreens,
+        .schedule,
+        .movieLibrary,
+        .contact {
+          display: block;
+        }
+      }
+
+      .desktop {
+        display: none;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .headerWrapper {
+    .header {
+      .desktop .contact {
+        display: none;
+      }
+      .mobile .contact {
+        display: block;
+      }
+    }
+  }
+}
+</style>
