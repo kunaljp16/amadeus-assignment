@@ -25,8 +25,8 @@ export default {
 </script>
 
 <template>
-  <section class="headerWrapper">
-    <header class="header" id="header">
+  <section class="headerWrapper container-fluid">
+    <header class="header container d-flex justify-content-between" id="header">
       <a href="#"><logoWhite /></a>
       <ul class="nav justify-content-end mt-1 desktop">
         <li class="nav-item home">
@@ -85,18 +85,14 @@ export default {
 @import "./../assets/scss/variables";
 
 .headerWrapper {
-  width: 100%;
   border-bottom: 1px solid $dark-gray;
 
   .header {
-    width: 1280px;
-    @media (min-width: 480px) and (max-width: 1279px) {
+
+    @media (min-width: 375px) and (max-width: 1279px) {
       width: calc(100% - 20px);
       padding: 20px;
     }
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     padding: 20px 0;
 
     & > a {
