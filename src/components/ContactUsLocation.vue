@@ -2,8 +2,8 @@
 import useValidate from "@vuelidate/core";
 import { required, email, minLength, sameAs } from "@vuelidate/validators";
 import { reactive, computed } from "vue";
+
 export default {
-  components: {},
   setup() {
     const state = reactive({
       name: "",
@@ -11,20 +11,17 @@ export default {
       email: "",
       telephone: "",
       message: "",
-      termsAndConditions: "",
     });
 
     const rules = computed(() => {
       return {
         name: { required, minLength: minLength(3) },
         lastName: { required, minLength: minLength(3) },
-        email: { required, email },
-        termsAndConditions: { required, sameAs: sameAs(() => true) },
+        email: { required, email }
       };
     });
 
     const v$ = useValidate(rules, state);
-
     return { v$, state };
   },
 
@@ -36,7 +33,6 @@ export default {
       } else {
         alert("error on page");
       }
-      console.log("value = " + this.v$);
     },
   },
 };
@@ -142,9 +138,6 @@ export default {
                       </a>
                     </label>
                   </span>
-                  <span class="error" v-if="v$.termsAndConditions.$error">
-                    {{ v$.termsAndConditions.$errors[0].$message }}
-                  </span>
                 </div>
                 <span class="d-block text-end mt-4">
                   <button @click="contactUsForm" type="submit" class="btn">
@@ -237,6 +230,5 @@ export default {
     margin-top: 1.5rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-}
+
 </style>
