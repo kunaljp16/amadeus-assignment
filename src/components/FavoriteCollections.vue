@@ -1,6 +1,6 @@
 <script>
 import axios from "axios";
-import Card from "./card.vue";
+import Card from "./Card.vue";
 import favoritesData from "./../module/favoritesData.json";
 
 export default {
