@@ -10,19 +10,19 @@
 <script>
 import Header from "./components/Header.vue";
 import Banner from "./components/Banner.vue";
-import Footer from "./components/Footer.vue";
-import ContactUsLocationWrapper from "./components/ContactUsLocationWrapper.vue";
 import MovieLibrary from "./components/MovieLibrary.vue";
 import FavoriteCollections from "./components/FavoriteCollections.vue";
+import ContactUsLocationWrapper from "./components/ContactUsLocationWrapper.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   components: {
     Header,
     Banner,
-    Footer,
-    ContactUsLocationWrapper,
     MovieLibrary,
     FavoriteCollections,
+    ContactUsLocationWrapper,
+    Footer,
   },
 };
 </script>
@@ -33,8 +33,5 @@ export default {
 #app {
   width: 100%;
   font-weight: normal;
-}
-
-@media (min-width: 1024px) {
 }
 </style>

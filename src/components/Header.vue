@@ -27,22 +27,22 @@ export default {
 <template>
   <section class="headerWrapper container-fluid">
     <header class="header container d-flex justify-content-between" id="header">
-      <a href="#"><logoWhite /></a>
+      <a href="javascript:void(0)"><logoWhite /></a>
       <ul class="nav justify-content-end mt-1 desktop">
         <li class="nav-item home">
-          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          <a class="nav-link active" aria-current="page" href="javascript:void(0)">HOME</a>
         </li>
         <li class="nav-item ourScreens">
-          <a class="nav-link" href="#">OUR SCREENS</a>
+          <a class="nav-link" href="javascript:void(0)">OUR SCREENS</a>
         </li>
         <li class="nav-item schedule">
-          <a class="nav-link" href="#">SCHEDULE</a>
+          <a class="nav-link" href="javascript:void(0)">SCHEDULE</a>
         </li>
         <li class="nav-item movieLibrary">
-          <a class="nav-link" href="#">MOVIE LIBRARY</a>
+          <a class="nav-link" href="javascript:void(0)">MOVIE LIBRARY</a>
         </li>
         <li class="nav-item contact">
-          <a class="nav-link" href="#">LOCATION &amp; CONTACT</a>
+          <a class="nav-link" href="javascript:void(0)">LOCATION &amp; CONTACT</a>
         </li>
       </ul>
       <div class="mobileMenuWrapper">
@@ -57,22 +57,22 @@ export default {
           </span>
           <ul class="menuList mobile">
             <li class="nav-item home">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              <a class="nav-link active" aria-current="page" href="javascript:void(0)">HOME</a>
             </li>
             <li class="nav-item ourScreens">
-              <a class="nav-link" href="#">OUR SCREENS</a>
+              <a class="nav-link" href="javascript:void(0)">OUR SCREENS</a>
             </li>
             <li class="nav-item schedule">
-              <a class="nav-link" href="#">SCHEDULE</a>
+              <a class="nav-link" href="javascript:void(0)">SCHEDULE</a>
             </li>
             <li class="nav-item movieLibrary">
-              <a class="nav-link" href="#">MOVIE LIBRARY</a>
+              <a class="nav-link" href="javascript:void(0)">MOVIE LIBRARY</a>
             </li>
             <li class="nav-item contact">
-              <a class="nav-link" href="#">LOCATION &amp; CONTACT</a>
+              <a class="nav-link" href="javascript:void(0)">LOCATION &amp; CONTACT</a>
             </li>
             <li class="nav-item gallery">
-              <a class="nav-link" href="#">GALLERY</a>
+              <a class="nav-link" href="javascript:void(0)">GALLERY</a>
             </li>
           </ul>
         </div>

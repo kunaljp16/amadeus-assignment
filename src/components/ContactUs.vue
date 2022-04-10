@@ -173,7 +173,7 @@ export default {
   button:not(:disabled) {
     background-color: $yellow;
     width: 200px;
-    color: #fff;
+    color: $white;
   }
   .error {
     font-size: 12px;

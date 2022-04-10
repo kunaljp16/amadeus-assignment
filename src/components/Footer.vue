@@ -4,17 +4,14 @@ import Copyright from "./Copyright.vue";
 import SocialMedia from "./SocialMedia.vue";
 
 export default {
-  components: {Address, Copyright, SocialMedia },
+  components: { Address, Copyright, SocialMedia },
 };
 </script>
 
 <template>
   <footer class="footerWrapper grayBg">
     <div class="footerOuterSec">
-      <section
-        class="footer container pt-4 pb-4 col-sm-6 text-sm-center"
-        id="footer"
-      >
+      <section class="footer container pt-4 pb-4 col-sm-6 text-sm-center">
         <div class="row">
           <Address />
           <SocialMedia />
