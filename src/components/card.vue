@@ -26,16 +26,17 @@ export default {
 .showImage {
   object-fit: cover;
   width: -webkit-fill-available;
-  min-height: 450px;
+  height: 550px;
 }
 
 .showCard a {
-  padding: 10px;
+  padding: 10px 14px;
   position: absolute;
   top: 10px;
   right: 23px;
   z-index: 5;
   background-color: $light-gray4;
+  opacity: 0.7;
 }
 
 .description {
