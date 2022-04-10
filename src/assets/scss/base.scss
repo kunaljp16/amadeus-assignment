@@ -1,9 +1,11 @@
+@import "./variables";
+
 body {
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
-  background: #000;
+  background: black;
   line-height: normal;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -12,4 +14,9 @@ body {
     width: auto;
   }
   margin: 0 auto;
+}
+
+.grayBg {
+  width: 100%;
+  background-color: $dark-gray2;
 }

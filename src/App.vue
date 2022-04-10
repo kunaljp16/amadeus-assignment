@@ -1,23 +1,28 @@
 <template>
   <Header />
   <Banner />
-  <ContactUsLocation />
+  <MovieLibrary />
+  <FavoriteCollections />
+  <ContactUsLocationWrapper />
   <Footer />
-  
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Banner from "./components/Banner.vue";
 import Footer from "./components/Footer.vue";
-import ContactUsLocation from "./components/ContactUsLocation.vue";
+import ContactUsLocationWrapper from "./components/ContactUsLocationWrapper.vue";
+import MovieLibrary from "./components/MovieLibrary.vue";
+import FavoriteCollections from "./components/FavoriteCollections.vue";
 
 export default {
   components: {
     Header,
     Banner,
     Footer,
-    ContactUsLocation,
+    ContactUsLocationWrapper,
+    MovieLibrary,
+    FavoriteCollections,
   },
 };
 </script>
