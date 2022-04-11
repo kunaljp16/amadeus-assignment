@@ -1,18 +1,19 @@
 <script>
 import axios from "axios";
-import Card from "./Card.vue";
+import { ref } from "vue";
 import favoritesData from "./../module/favoritesData.json";
-
+import Card from "./Card.vue";
+import SearchCollections from "./SearchCollections.vue";
 export default {
-  components: { Card },
+  components: { Card, SearchCollections },
+
   data() {
     return {
-      name: "",
+      name: ref(""),
       showsData: "",
       errors: [],
       showObj: {},
       filteredShowData: [],
-      isInputHasValue: false,
       favorites: favoritesData,
       isShowInFavorites: function (id) {
         return this.favorites.some(function (el) {
@@ -37,7 +38,7 @@ export default {
     },
   },
   methods: {
-    iterate(obj) {
+    iterate: function (obj) {
       obj.forEach((show) => {
         var showItem = {};
         showItem.name = show.name;
@@ -61,7 +62,6 @@ export default {
         this.isInputHasValue = false;
       }
     },
-
     getIdFromList: function (id) {
       let data = this.filteredShowData;
 
@@ -88,29 +88,12 @@ export default {
             <div class="col-md-9 col-sm-12">
               <h2>Collect your favorites</h2>
             </div>
-            <div class="col-md-3 col-sm-12 mt-sm-3 mb-sm-3">
-              <form class="form-inline">
-                <input
-                  class="form-control mr-sm-2 search"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                  v-model="name"
-                  @keyup="checkInputTyping"
-                  autocomplete="off"
-                />
-                <div class="searchResult" v-if="isInputHasValue">
-                  <ul>
-                    <li
-                      v-for="show in filterShows"
-                      :key="show.id"
-                      @click="getIdFromList(show.id)"
-                    >
-                      {{ show.name }} {{ show.id }}
-                    </li>
-                  </ul>
-                </div>
-              </form>
+            <div class="col-md-3 col-sm-12 mt-sm-3 mb-sm-3 mt-md-0">
+              <SearchCollections
+                v-model="name"
+                :filterShows="filterShows"
+                :getIdFromList="getIdFromList"
+              />
             </div>
           </div>
         </div>

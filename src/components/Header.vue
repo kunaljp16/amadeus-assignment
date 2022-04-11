@@ -125,20 +125,18 @@ export default {
       margin: 6px 0 0;
     }
     .mobileMenuPanel {
-      display: block;
+      display: none;
       width: 300px;
       height: 100vh;
       background-color: $black;
       padding: 10px 30px 0 10px;
       position: absolute;
       top: 0;
-      right: -300px;
-      transition: right 0.5s;
+      right: 0;
       z-index: 2;
 
       &.panelOpen {
-        right: 0;
-        transition: right 0.5s;
+        display: block;
       }
     }
     .menuList {
