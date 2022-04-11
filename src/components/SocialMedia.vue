@@ -12,10 +12,10 @@ export default {
   >
     <span class="pe-3"> Follow us on </span>
     <span class="pe-3">
-      <a href="javascript:void(0)"><TwitterWhite /></a>
+      <a href="javascript:void(0)" aria-label="Twitter"><TwitterWhite /></a>
     </span>
     <span>
-      <a href="javascript:void(0)"><YoutubeWhite /></a>
+      <a href="javascript:void(0)" aria-label="YouTube"><YoutubeWhite /></a>
     </span>
   </div>
 </template>

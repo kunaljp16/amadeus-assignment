@@ -10,9 +10,9 @@ export default {
 <template>
   <div class="col-md-4 col-md-4 col-sm-6 position-relative mb-4 showCard">
     <a href="javascript:void(0)" @click="$emit('remove')">
-      <img src="./../assets/icons/CloseGrey.svg" />
+      <img src="./../assets/icons/CloseGrey.svg" alt="Delete Favorite" />
     </a>
-    <img class="showImage" :src="image" />
+    <img class="showImage" :src="image" :alt="name" />
     <div class="description">
       <h4 class="mt-2">{{ name }}</h4>
       <span class="summary" v-html="summary"></span>
@@ -49,8 +49,7 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; 
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-
 </style>

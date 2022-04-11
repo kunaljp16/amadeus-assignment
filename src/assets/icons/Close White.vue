@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="12.728" height="12.728" viewBox="0 0 12.728 12.728">
+  <svg role="img" focusable='true'  xmlns="http://www.w3.org/2000/svg" width="12.728" height="12.728" viewBox="0 0 12.728 12.728">
     <g id="Group_8592" data-name="Group 8592" transform="translate(-441.636 -1013.036)">
       <g id="Group_8586" data-name="Group 8586" transform="translate(1226.737 -260.675) rotate(45)">
         <line id="Line_133" data-name="Line 133" x2="16" transform="translate(346.5 1455.8)" fill="none" stroke="#fff" stroke-width="2"/>

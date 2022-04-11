@@ -97,6 +97,7 @@ export default {
                   aria-label="Search"
                   v-model="name"
                   @keyup="checkInputTyping"
+                  autocomplete="off"
                 />
                 <div class="searchResult" v-if="isInputHasValue">
                   <ul>

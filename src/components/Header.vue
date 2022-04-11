@@ -27,10 +27,15 @@ export default {
 <template>
   <section class="headerWrapper container-fluid">
     <header class="header container d-flex justify-content-between" id="header">
-      <a href="javascript:void(0)"><logoWhite /></a>
+      <a href="javascript:void(0)" aria-label="Company logo"><logoWhite /></a>
       <ul class="nav justify-content-end mt-1 desktop">
         <li class="nav-item home">
-          <a class="nav-link active" aria-current="page" href="javascript:void(0)">HOME</a>
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="javascript:void(0)"
+            >HOME</a
+          >
         </li>
         <li class="nav-item ourScreens">
           <a class="nav-link" href="javascript:void(0)">OUR SCREENS</a>
@@ -42,22 +47,31 @@ export default {
           <a class="nav-link" href="javascript:void(0)">MOVIE LIBRARY</a>
         </li>
         <li class="nav-item contact">
-          <a class="nav-link" href="javascript:void(0)">LOCATION &amp; CONTACT</a>
+          <a class="nav-link" href="javascript:void(0)"
+            >LOCATION &amp; CONTACT</a
+          >
         </li>
       </ul>
       <div class="mobileMenuWrapper">
-        <a href="javascript:void(0)" @click="openPanel"><MenuWhite /></a>
+        <a href="javascript:void(0)" @click="openPanel" aria-label="Menu">
+          <MenuWhite />
+        </a>
         <div
           :class="isPanelOpen ? 'mobileMenuPanel panelOpen' : 'mobileMenuPanel'"
         >
-          <span class="closeBtn" >
-            <a href="javascript:void(0)" role="button" @click="closePanel">
-            <CloseWhite class="justify-content-end" />
-          </a>
+          <span class="closeBtn">
+            <a href="javascript:void(0)" role="button" @click="closePanel" aria-label="Close Panel">
+              <CloseWhite class="justify-content-end" />
+            </a>
           </span>
           <ul class="menuList mobile">
             <li class="nav-item home">
-              <a class="nav-link active" aria-current="page" href="javascript:void(0)">HOME</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="javascript:void(0)"
+                >HOME</a
+              >
             </li>
             <li class="nav-item ourScreens">
               <a class="nav-link" href="javascript:void(0)">OUR SCREENS</a>
@@ -69,7 +83,9 @@ export default {
               <a class="nav-link" href="javascript:void(0)">MOVIE LIBRARY</a>
             </li>
             <li class="nav-item contact">
-              <a class="nav-link" href="javascript:void(0)">LOCATION &amp; CONTACT</a>
+              <a class="nav-link" href="javascript:void(0)"
+                >LOCATION &amp; CONTACT</a
+              >
             </li>
             <li class="nav-item gallery">
               <a class="nav-link" href="javascript:void(0)">GALLERY</a>
@@ -88,7 +104,6 @@ export default {
   border-bottom: 1px solid $dark-gray;
 
   .header {
-
     @media (min-width: 375px) and (max-width: 1279px) {
       width: calc(100% - 20px);
       padding: 20px;
@@ -110,17 +125,20 @@ export default {
       margin: 6px 0 0;
     }
     .mobileMenuPanel {
-      display: none;
+      display: block;
       width: 300px;
       height: 100vh;
       background-color: $black;
       padding: 10px 30px 0 10px;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -300px;
+      transition: right 0.5s;
+      z-index: 2;
 
       &.panelOpen {
-        display: block;
+        right: 0;
+        transition: right 0.5s;
       }
     }
     .menuList {

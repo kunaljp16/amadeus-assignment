@@ -4,6 +4,7 @@
       <div class="gMapCanvas">
         <iframe
           id="gMapCanvas"
+          title="Google Map Amadeus Address"
           src="https://maps.google.com/maps?q=Amadeus%20IT%20Group,%20C.%20Salvador%20de%20Madariaga,%201,%2028027%20Madrid&t=&z=13&ie=UTF8&iwloc=&output=embed"
           frameborder="0"
           scrolling="no"

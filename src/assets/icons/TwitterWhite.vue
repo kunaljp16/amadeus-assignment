@@ -4,6 +4,7 @@
     width="25.443"
     height="20.664"
     viewBox="0 0 25.443 20.664"
+    focusable='false'
   >
     <path
       id="Icon_awesome-twitter"

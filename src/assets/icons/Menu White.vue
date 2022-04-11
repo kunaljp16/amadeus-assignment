@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="20" viewBox="0 0 32 20">
+  <svg  role="img" focusable='true' xmlns="http://www.w3.org/2000/svg" width="32" height="20" viewBox="0 0 32 20">
     <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3.5 -8)">
       <path id="Path_1" data-name="Path 1" d="M4.5,18h30" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       <path id="Path_2" data-name="Path 2" d="M4.5,9h30" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>

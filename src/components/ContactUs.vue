@@ -51,6 +51,7 @@ export default {
             id="name"
             aria-describedby="name"
             v-model="state.name"
+            aria-required='true'
           />
           <span class="error" v-if="v$.name.$error">{{
             v$.name.$errors[0].$message
@@ -63,8 +64,8 @@ export default {
             class="form-control"
             :class="v$.lastName.$error ? 'border-danger' : ''"
             id="lastName"
-            aria-describedby="Last Name"
             v-model="state.lastName"
+            aria-required='true'
           />
           <span class="error" v-if="v$.lastName.$error">{{
             v$.lastName.$errors[0].$message
@@ -79,8 +80,8 @@ export default {
             class="form-control"
             :class="v$.email.$error ? 'border-danger' : ''"
             id="email"
-            aria-describedby="Email"
             v-model="state.email"
+            aria-required='true'
           />
           <span class="error" v-if="v$.email.$error">{{
             v$.email.$errors[0].$message

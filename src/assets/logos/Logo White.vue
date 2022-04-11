@@ -1,5 +1,5 @@
 <template>
-<svg xmlns="http://www.w3.org/2000/svg" width="166.931" height="40" viewBox="0 0 166.931 40">
+<svg role="img" focusable='false'  xmlns="http://www.w3.org/2000/svg" width="166.931" height="40" viewBox="0 0 166.931 40">
   <g id="logoipsum-logo-55" transform="translate(-0.317 -0.923)">
     <path id="Path_1" data-name="Path 1" d="M49.278,28.952H61.229v-3.6h-7.7V11.792H49.278Z" fill="#fff"/>
     <path id="Path_2" data-name="Path 2" d="M68.311,26.552c-1.7,0-2.592-1.488-2.592-3.72s.888-3.744,2.592-3.744,2.616,1.512,2.616,3.744S70.015,26.552,68.311,26.552Zm.024,2.784a6.263,6.263,0,0,0,6.552-6.5,6.564,6.564,0,0,0-13.128,0A6.3,6.3,0,0,0,68.335,29.336Z" fill="#fff"/>
