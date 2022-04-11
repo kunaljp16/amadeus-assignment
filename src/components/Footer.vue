@@ -12,7 +12,7 @@ export default {
   <footer class="footerWrapper grayBg">
     <div class="footerOuterSec">
       <section class="footer container pt-4 pb-4 col-sm-6 text-sm-center">
-        <div class="row">
+        <div class="row justify-content-between">
           <Address />
           <SocialMedia />
         </div>

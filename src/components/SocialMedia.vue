@@ -8,7 +8,7 @@ export default {
 
 <template>
   <div
-    class="col-lg-3 col-md-6 offset-lg-6 col-sm-12 text-md-end text-sm-center"
+    class="col-lg-3 col-md-6 col-sm-12 text-md-end text-sm-center"
   >
     <span class="pe-3"> Follow us on </span>
     <span class="pe-3">
@@ -19,3 +19,14 @@ export default {
     </span>
   </div>
 </template>
+
+<style lang="scss">
+@import "./../assets/scss/variables";
+
+html[dir="rtl"] {
+  .text-md-end{
+    text-align: left;
+  }
+}
+
+</style>

@@ -60,7 +60,12 @@ export default {
           :class="isPanelOpen ? 'mobileMenuPanel panelOpen' : 'mobileMenuPanel'"
         >
           <span class="closeBtn">
-            <a href="javascript:void(0)" role="button" @click="closePanel" aria-label="Close Panel">
+            <a
+              href="javascript:void(0)"
+              role="button"
+              @click="closePanel"
+              aria-label="Close Panel"
+            >
               <CloseWhite class="justify-content-end" />
             </a>
           </span>
@@ -169,6 +174,26 @@ export default {
         display: none;
       }
     }
+  }
+}
+
+html[dir="rtl"] {
+  .headerWrapper .header {
+    & > a {
+      margin-right: 0;
+    }
+    .mobileMenuPanel {
+      left: 0 ;
+      right:auto;
+      padding: 10px 10px 0 30px;
+    }
+    .closeBtn {
+      margin: 0 0 10px 30px;
+      text-align: left;
+    }
+  }
+  .desktop {
+    margin-right: auto;
   }
 }
 
