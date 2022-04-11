@@ -18,6 +18,7 @@ export default {
         name: { required, minLength: minLength(3) },
         lastName: { required, minLength: minLength(3) },
         email: { required, email },
+        message: { required },
       };
     });
 
@@ -107,7 +108,11 @@ export default {
             class="form-control"
             id="message"
             v-model="state.message"
+            :class="v$.message.$error ? 'border-danger' : ''"
           ></textarea>
+           <span class="error" v-if="v$.message.$error">{{
+            v$.message.$errors[0].$message
+          }}</span>
         </div>
       </div>
       <div class="row mt-3">
