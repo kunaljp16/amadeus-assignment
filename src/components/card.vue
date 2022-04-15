@@ -43,6 +43,13 @@ export default {
   background-color: $light-gray3;
   padding: 10px 15px;
   height: 126px;
+
+  h4 {
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .summary {
